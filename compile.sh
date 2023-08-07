@@ -4,6 +4,7 @@ g++ -I"deps/GLFW/include" src/main.cpp -o Pong.exe -L"deps/GLFW/lib-mingw-w64" -
 if [ -e "Pong.exe" ]; then
     echo "File complication was successfully transferring the file to the bin."
     mv Pong.exe "bin"
+    bin/Pong.exe
 else 
     read -p "File failed to be compiled. Read the error message."
 fi
