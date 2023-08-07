@@ -5,9 +5,10 @@
 TODO: Create the Paddles
 TODO: Create the Ball
 TODO: Create the scoring system
+TODO: Add icon for the program's window and compilation later.
 */
-int windowWidth = 500;
-int windowHeight = 500;
+int windowWidth = 1000;
+int windowHeight = 1000;
 const char* windowName = "Pong";
 
 int main()
@@ -16,6 +17,7 @@ int main()
     if(!glfwInit())
         return -1;
     
+    glfwWindowHint(GLFW_MAXIMIZED, GLFW_TRUE);
     gameScreen = glfwCreateWindow(windowWidth, windowHeight, windowName, NULL, NULL);
     if(!gameScreen)
     {
@@ -24,12 +26,16 @@ int main()
     }
 
     /* Make the window's context current */
-    glfwMakeContextCurrent(gameScreen);
+    glfwMakeContextCurrent(gameScreen); //What does make the windows context mean?
     while(!glfwWindowShouldClose(gameScreen))
-    {
+    {   
         glClear(GL_COLOR_BUFFER_BIT);
-        glfwSwapBuffers(gameScreen);
+        //Render graphics here.
+
+        //DO NOT RENDER BELOW THIS LINE.
+        glfwSwapBuffers(gameScreen); //What does this do?
         glfwPollEvents();
+        //Handle user input or respond to events here.
     }
     glfwTerminate();
 }
