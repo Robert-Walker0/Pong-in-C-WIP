@@ -17,6 +17,9 @@ This project is a work in progress, so this cannot be answered until it is compl
 
 What makes this project stand out?
 Nothing, this is a clone of pong.
+
+Credits
+Image for the window icon and application come from UpLabs's A Tiny Game of Pong IOS. The note about this image was written in advance, it will not show up until the project is finished.
 # Installation
 To be written later.
 
