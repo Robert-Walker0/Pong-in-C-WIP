@@ -1,12 +1,13 @@
 #include <iostream>
 #include <GLFW/glfw3.h>
+#include "../headers/paddles.hpp"
 
 /*
-TODO: Create the Paddles
 TODO: Create the Ball
 TODO: Create the scoring system
 TODO: Add icon for the program's window and compilation later.
 */
+
 int windowWidth = 1000;
 int windowHeight = 1000;
 const char* windowName = "Pong";
@@ -25,15 +26,22 @@ int main()
         return -1;
     }
 
-    /* Make the window's context current */
-    glfwMakeContextCurrent(gameScreen); //What does make the windows context mean?
+    unsigned int buffer;
+    glfwMakeContextCurrent(gameScreen); 
+
+    // Game Variables
+    Paddle player1 = Paddle(-1.0, 0.1);
+    Paddle player2 = Paddle(.95, 0.1);
+    //End
+
     while(!glfwWindowShouldClose(gameScreen))
     {   
         glClear(GL_COLOR_BUFFER_BIT);
         //Render graphics here.
-
+        player1.Draw(gameScreen);
+        player2.Draw(gameScreen);
         //DO NOT RENDER BELOW THIS LINE.
-        glfwSwapBuffers(gameScreen); //What does this do?
+        glfwSwapBuffers(gameScreen); 
         glfwPollEvents();
         //Handle user input or respond to events here.
     }
