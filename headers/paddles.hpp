@@ -10,7 +10,7 @@ class Paddle
     void Translate(float dx, float dy);
     void Scale(float scaleFactor);
 
-    private:
+    protected:
         float x;
         float y;
         float width;
