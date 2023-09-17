@@ -14,6 +14,8 @@ Having local pong on your machine.
 
 What did you learn?
 This project is a work in progress, so this cannot be answered until it is completed.
+- How to create a rectangle using C++ OpenGL.
+- How to create things using legacy OpenGL.
 
 What makes this project stand out?
 Nothing, this is a clone of pong.
