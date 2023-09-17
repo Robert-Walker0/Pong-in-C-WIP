@@ -10,9 +10,10 @@ Paddle::Paddle(float x, float y)
 
 void Paddle::Draw(GLFWwindow *window)
 {
-    
+    float R, G, B;
+    R = colorArr[0], G = colorArr[1], B = colorArr[2];
     glBegin(GL_QUADS);
-    glColor3f(1.0f, 1.0f, 1.0f);
+    glColor3f(R, G, B);
     glVertex2f(x, y);
     glVertex2f(x + width, y);
     glVertex2f(x + width, y + height);
