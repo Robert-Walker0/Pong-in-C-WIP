@@ -1,4 +1,4 @@
-#include "../headers/Player.h"
+#include "../headers/player.hpp"
 #include <iostream>
 
 Player::Player() : Paddle(-1.0, .1)
