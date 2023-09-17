@@ -1,16 +1,16 @@
 #include <iostream>
 #include <GLFW/glfw3.h>
-#include "../headers/paddles.hpp"
-#include "../headers/Player.h"
+#define STB_IMAGE_IMPLEMENTATION
+#include <stb/stb_image.h>
+#include "../headers/paddle.hpp"
+#include "../headers/player.hpp"
 
 /*
 These are the later objectives, the main objectives will be placed underneath this TODO as a new one.
 TODO: Create the Ball
 TODO: Create the scoring system
-TODO: Add icon for the program's window and compilation later.
+TODO: Create enemy AI
 */
-
-//TODO: Replace the compile icon for something else on compile time.
 
 int windowWidth = 1000;
 int windowHeight = 1000;
@@ -40,6 +40,10 @@ int main()
     Paddle playerTwo = Paddle(.96, startingY);
     //End
 
+    //Setting the game icon
+    GLFWimage image[1]; 
+    image[0].pixels = stbi_load("imgs/program_icon.png", &image[0].width, &image[0].height, 0, 4);
+    glfwSetWindowIcon(gameScreen, 1, image);
     glfwSetKeyCallback(gameScreen, key_callback);
     while(!glfwWindowShouldClose(gameScreen))
     {   
