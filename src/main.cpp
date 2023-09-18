@@ -4,6 +4,7 @@
 #include <stb/stb_image.h>
 #include "../headers/paddle.hpp"
 #include "../headers/player.hpp"
+#include "../headers/Ball.hpp"
 
 /*
 These are the later objectives, the main objectives will be placed underneath this TODO as a new one.
@@ -19,6 +20,7 @@ double startingY = .1;
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 Player P;
+Ball B;
 int main()
 {
     GLFWwindow* gameScreen;
@@ -49,6 +51,7 @@ int main()
     {   
         glClear(GL_COLOR_BUFFER_BIT);
         //Render graphics here.
+        B.Draw();
         P.Draw(gameScreen);
         playerTwo.Draw(gameScreen);
         //DO NOT RENDER BELOW THIS LINE.
