@@ -18,5 +18,4 @@ void Player::keycallback(GLFWwindow *window, int key, int scancode, int action, 
         //The y in this if is the bottom of the screen.
         this->Translate(0, -moveSpeed);
     } 
-    std::cout << "y=" << y << std::endl;
 }
